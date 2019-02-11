@@ -1,4 +1,4 @@
-import THREE, { Camera, CubeGeometry } from 'three'
+import * as THREE from 'three'
 
 const demo = () => {
     const scene = new THREE.Scene()
@@ -21,9 +21,9 @@ const demo = () => {
         cube.rotation.y += 0.01
     
         renderer.render(scene, camera)
+        requestAnimationFrame(loop)
     }
-    
-    requestAnimationFrame(loop)
+    loop()
 }
 
 export default demo
